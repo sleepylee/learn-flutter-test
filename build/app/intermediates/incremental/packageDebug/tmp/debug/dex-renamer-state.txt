@@ -1,0 +1,4 @@
+#Wed Mar 17 17:13:28 ICT 2021
+base.0=/Users/trung/Documents/workspace/flutter-playground/learn_test/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
