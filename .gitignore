@@ -5,3 +5,5 @@
 /.gradle/
 /.flutter-plugins-dependencies
 /.packages
+/android/.gradle/
+/ios/Pods/
