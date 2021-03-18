@@ -51,7 +51,7 @@ void main() {
       unFavorite.onPressed();
       await tester.pumpAndSettle(Duration(seconds: 1));
 
-      // Expect to see there is an Favorite item - filled heart icon; a toast show up
+      // Expect to see there is NO Favorite item; a toast show up notifies Removed
       expect(find.byIcon(Icons.favorite), findsNothing);
       expect(find.text('Removed from favorites.'), findsOneWidget);
     });
