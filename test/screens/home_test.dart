@@ -23,15 +23,20 @@ void main() {
     });
 
     testWidgets('Test tap on Favorite an Item', (tester) async {
+      // Init, pump the Home widget up for testing
       await tester.pumpWidget(createHomeScreen());
-      expect(find.byIcon(Icons.favorite), findsNothing);
-      expect(find.widgetWithIcon(IconButton, Icons.favorite_border), findsWidgets);
-      await tester.pump(const Duration(milliseconds: 300));
 
-      await tester.tap(find.widgetWithIcon(IconButton, Icons.favorite_border).at(1));
+      // Expect there is NO favorite item yet
+      expect(find.byIcon(Icons.favorite), findsNothing);
+
+      // Tap on Favorite the 1st item, note that tester.tap doesn't work as expected on IconButton
+      IconButton fav = find.widgetWithIcon(IconButton, Icons.favorite_border).evaluate().first.widget;
+      fav.onPressed();
       await tester.pumpAndSettle(Duration(seconds: 1));
-      expect(find.text('Added to favorites.'), findsOneWidget);
+
+      // Expect to see there is an Favorite item - filled heart icon; a toast show up
       expect(find.byIcon(Icons.favorite), findsWidgets);
+      expect(find.text('Added to favorites.'), findsOneWidget);
     });
   });
 }
