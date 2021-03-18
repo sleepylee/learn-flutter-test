@@ -1,4 +1,0 @@
-io/flutter/plugins/GeneratedPluginRegistrant.java
- io.flutter.plugins.GeneratedPluginRegistrant
-co/playground/test/learn_test/BuildConfig.java
- co.playground.test.learn_test.BuildConfig

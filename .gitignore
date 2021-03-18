@@ -1,5 +1,5 @@
 /.idea/*
-/build/*
+/build/
 /.dart_tool/
 /gen/
 /.gradle/
